@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block head %}
+    <title>WaveNet Audio Transcription</title>
+    <link rel="stylesheet" href="../static/audio.css">
+{% endblock %}
+
+{% block content %}
+    <h1 id="title" class="text"> Audio Transcriber</h1>
+    <hr>
+    <p class="text">This audio transcriber is powered by a powerful deep learning architecture WaveNet.</p>
+    <p class="text">It accepts (.wav) files and will return the transcriptions of the file.</p>
+    <p class="text">However, it currently doesn't support punctuations, so the transcriptions is only raw text.</p>
+    <form id="upload" action="/upload" method="post" enctype="multipart/form-data">
+        <label class="text" for="audioFile">Choose a WAV file:</label>
+        <br>
+        <br>
+        <input type="file" id="audioFile" name="audioFile" accept="audio/wav, audio/wave">
+        <br>
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+{% endblock %}

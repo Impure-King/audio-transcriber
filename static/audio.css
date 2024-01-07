@@ -1,0 +1,19 @@
+#title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.text {
+    color: aliceblue;
+    font-size: large;
+    text-align: center;
+}
+
+#upload {
+    text-align: center;
+}
+
+#audioFile {
+    padding-left: 20px;
+    color: aliceblue;
+}

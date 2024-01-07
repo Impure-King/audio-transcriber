@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/base.css">
+    <link rel="icon" type="image/png" href="../static/images/logo.png">
+    {% block head %}{% endblock %}
+</head>
+{% block body %}
+<body>
+    <!--Creating the navbar for inheritance-->
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li>
+                <div id="navbar-logo-div">
+                    <a href="/">
+                        <img id="navbar-logo" src="../static/images/logo.png">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="http://impure-king.github.io">Home Page</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="/home">Audio Transcriber</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- Allowing for the body to adjust inside the div.-->
+    <div class="body">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+{% endblock %}
+</html>

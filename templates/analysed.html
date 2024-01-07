@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block head %}
+    <title>Transcribed File</title>
+    <link rel="stylesheet" href="../static/audio.css">
+    <link rel="stylesheet" href="../static/analysed.css">
+{% endblock %}
+
+{% block content %}
+    <h1 id="title" class="text"> Audio Transcriber</h1>
+    <hr>
+    <p class="text">This audio transcriber is powered by a powerful deep learning architecture WaveNet.</p>
+    <p class="text">It accepts (.wav) files and will return the transcriptions of the file.</p>
+    <p class="text">However, it currently doesn't support punctuations, so the transcriptions is only raw text.</p>
+    <hr>
+    <p class="text">Audio File successfully uploaded!</p>
+    <p class="text">Transcribed Audio: </p>
+    <p class="text" id="transcribed_text">{{transcription}}</p>
+    <p class="text">Click ``<a link="/">Audio Transcriber</a>`` to head back to upload page.</p>
+
+{% endblock %}
