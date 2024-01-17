@@ -1,6 +1,5 @@
 import torch
 import torchaudio
-from torch import nn
 from transformers import Speech2TextProcessor, Speech2TextForConditionalGeneration
 
 model = Speech2TextForConditionalGeneration.from_pretrained("facebook/s2t-small-librispeech-asr")
